@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MCyberX</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Header -->
+        <header>
+            <h2>MCyberX</h2>
+            <span>● Online</span>
+        </header>
+
+
+        <!-- Main Content -->
+        <main>
+
+            <div class="welcome">
+                <h1>CyberX is At your<br>Service, Boss!</h1>
+                <p>How can I help you today?</p>
+            </div>
+
+
+            <!-- Voice -->
+            <div class="voice-container">
+
+                <button id="voiceButton">
+                    🎙
+                </button>
+
+                <p id="status">Tap to speak</p>
+
+            </div>
+
+
+            <!-- User Message -->
+            <div class="message user-message">
+
+                <p id="userText">
+                    Your voice will appear here...
+                </p>
+
+            </div>
+
+
+            <!-- AI Message -->
+            <div class="message ai-message">
+
+                <p id="aiText">
+                    I'm listening.
+                </p>
+
+            </div>
+
+        </main>
+
+
+        <!-- Footer -->
+        <footer>
+
+            <button id="textButton">
+                💬 Text
+            </button>
+
+            <button id="settingsButton">
+                ⚙ Settings
+            </button>
+
+        </footer>
+
+
+        <!-- Text Input -->
+        <div id="textBox" class="hidden">
+
+            <input
+                type="text"
+                id="textInput"
+                placeholder="Type your message..."
+            >
+
+            <button id="sendButton">
+                Send
+            </button>
+
+        </div>
+
+
+        <!-- Settings -->
+        <div id="settingsBox" class="hidden">
+
+            <h3>Settings</h3>
+
+            <p>Voice: Default</p>
+            <p>Theme: Dark</p>
+
+            <button id="closeSettings">
+                Close
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
